@@ -13,5 +13,5 @@ Rails.application.routes.draw do
     resources :forum_posts, module: :forum_threads
   end
 
-  root to: 'pages#home'
+  root to: 'forum_threads#index'
 end
