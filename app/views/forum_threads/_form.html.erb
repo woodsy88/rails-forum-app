@@ -2,7 +2,7 @@
   <div class="form-group">
     <%= f.text_field :subject, placeholder: "enter subject of forum", class: 'form-control' %>
   </div>
-  
+  <!-- allow post to be created when new forum is created-->
   <%= f.fields_for :forum_posts do |p|  %>
     <div class="form-group">
       <%= p.text_area :body, pladeholder: "Add your first post for your forum", rows:10, class: "form-control" %>
@@ -10,6 +10,6 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
