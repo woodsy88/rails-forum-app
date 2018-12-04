@@ -1,0 +1,8 @@
+<%= div_for object do %>
+    <div class="card spacing-xl" style="width: 100%">
+      <div class="card-body">
+        <%= object.body %>
+        created <%= time_ago_in_words(object.created_at) %> by <%= object.user.name.full %>
+      </div>
+    </div>
+<% end %>

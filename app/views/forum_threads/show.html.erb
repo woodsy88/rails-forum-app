@@ -1,14 +1,11 @@
 <div class="container">
+  <h2>Add a New post for thread</h2>
+ <%= render partial: "forum_posts/form" %>
   <div class="row">
   <div class="text-center"><h2 class="card-title text-center"><%= @forum_thread.subject %></h2></div>
   <div class="col-md-12"> 
-        <% @forum_thread.forum_posts.each do |post| %>
-          <div class="card" style="width: 100%">
-            <div class="card-body">
-              <%= post.body %>
-              created <%= time_ago_in_words(post.created_at) %> by <%= post.user.name.full %>
-            </div>
-          </div>
+        <% @forum_thread.forum_posts.each do |forum_post| %>
+          <%= render 'forum_post', object: forum_post %>
         <% end %>
   </div>
   </div>

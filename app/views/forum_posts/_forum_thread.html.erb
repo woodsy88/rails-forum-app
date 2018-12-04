@@ -1,0 +1,9 @@
+<%= div_for forum_post do %>
+    <div class="card" style="width: 100%">
+      <div class="card-body">
+        <%= forum_post.body %>
+        created <%= time_ago_in_words(forum_post.created_at) %> by <%= forum_post.user.name.full %>
+      </div>
+    </div>
+<% end %>
+

@@ -71,3 +71,5 @@ gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 gem 'jquery-rails'
 
 gem 'name_of_person', '~> 1.0'
+
+gem 'record_tag_helper', '~> 1.0'

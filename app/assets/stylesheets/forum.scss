@@ -1,0 +1,7 @@
+.forum_post {
+
+  &:target {
+      background-color: rgb(248, 238, 199);
+      padding: 8px;
+  }
+}
