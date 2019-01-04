@@ -73,3 +73,5 @@ gem 'jquery-rails'
 gem 'name_of_person', '~> 1.0'
 
 gem 'record_tag_helper', '~> 1.0'
+
+gem 'ransack', '~> 2.1', '>= 2.1.1'

@@ -1,10 +1,18 @@
 <div class="container">
-  <div class="row">
+  <div class="row section-padding-sm">
+    <%= search_form_for @q, html: { class: "form-inline" } do |f| %>
+        <%= f.search_field :subject_or_forum_posts_body_cont, placeholder: "Search Forums", class: "form-control" %>
+         <%= f.submit class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+
+  <div class="row section-padding-sm">
     <div class="col-md-12">
         <% @forum_threads.each do |forum_thread| %>
             <div class="card spacing-md" style="width: 100%">
               <div class="card-body">
-                <h2 class="card-title"><%= forum_thread.subject %></h2>
+                <h2 class="card-title"><%= link_to forum_thread.subject, forum_thread_path(forum_thread) %></h2>
                   <div class="list-group list-group-flush">
                       <div class="list-group-item">Thread created <%= time_ago_in_words(forum_thread.created_at) %> by <%= forum_thread.user.name.full %></div>
                       <div class="list-group-item"><%= link_to pluralize(forum_thread.forum_posts.count, "post"), forum_thread_path(forum_thread) %></div>
