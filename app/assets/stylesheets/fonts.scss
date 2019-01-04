@@ -1,0 +1,115 @@
+@import "colors.scss";
+
+.no-decor {
+  text-decoration: none !important;
+}
+
+//  Heading Spacing
+
+.heading-spacing-m {
+  margin-bottom: .25rem;
+}
+
+// WEIGHTS
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.x-bold {
+  font-weight: 700;
+}
+
+.xx-bold {
+  font-weight: 800;
+}
+
+// Size
+.small-12 {
+  font-size: 12px;
+}
+
+.small-14 {
+  font-size: 14px;
+}
+
+.medium-16 {
+  font-size: 16px;
+}
+
+.medium-18 {
+  font-size: 18px;
+}
+
+.medium-20 {
+  font-size: 20px;
+}
+
+.large-24 {
+  font-size: 24px;
+}
+
+.large-32 {
+  font-size: 32px;
+}
+
+.large-42 {
+  font-size: 42px;
+}
+
+.x-large-52 {
+  font-size: 52px;
+}
+
+.x-large-65 {
+  font-size: 65px;
+}
+
+
+.hero-text {
+  color: $black;
+  @extend .x-bold;
+  @extend .x-large-65;
+}
+
+.sub-hero-text {
+  color: $black;
+  @extend .large-42;
+}
+
+.header-1 {
+  color: $blue-900;
+  @extend .regular;
+  margin-bottom: .25rem;
+  @extend .large-42;
+
+}
+
+.header-2 {
+  color: $blue-900;
+  @extend .x-bold;
+  @extend .large-32;
+  margin-bottom: .25rem;
+
+}
+
+.header-3 {
+  color: $blue-900;
+  @extend .x-bold;
+  margin-bottom: .25rem;
+  @extend .large-32;
+
+}
+
+.header-4 {}
+
+.header-5 {}
+
+.header-6 {}
