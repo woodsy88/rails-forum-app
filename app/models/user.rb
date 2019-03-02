@@ -29,6 +29,7 @@ class User < ApplicationRecord
 
   has_many :forum_threads
   has_many :forum_posts
+  has_many :notifications, foreign_key: :recipient_id
   
   validates_presence_of :first_name, :last_name
   

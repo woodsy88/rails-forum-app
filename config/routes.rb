@@ -6,6 +6,12 @@ Rails.application.routes.draw do
     get 'signup', to: 'devise/registrations#new'
   end
 
+  resources :notifications do
+    collection do
+            # method in notifications controller
+      post :mark_as_read
+    end
+  end
 
   devise_for :users, :controllers => {:registrations => "registrations"}
   
