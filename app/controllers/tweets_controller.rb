@@ -4,9 +4,7 @@ class TweetsController < ApplicationController
   # GET /tweets
   # GET /tweets.json
   def index
-    @tweets = Tweet.all
-
-     @tweet = Tweet.new
+    @tweets = Tweet.all.order("created_at DESC")
   end
 
   # GET /tweets/1
@@ -25,9 +23,9 @@ class TweetsController < ApplicationController
 
   def retweet
                               # set retweet id to the original tweet id
-    tweet = current_user.tweets.create(tweet_id: @tweet.id, body: @tweet.body)
+    tweet = current_user.tweets.create(tweet_id: @tweet.id, body: params[:tweet][:body])
     if tweet.save
-      redirect_to tweets_path
+      redirect_to tweets_path, notice: "retweeted"
     else
       redirect_to :back, notice: "Unable to retweet"
     end

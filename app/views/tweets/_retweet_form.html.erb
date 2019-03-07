@@ -1,0 +1,10 @@
+<%= form_for :tweet, method: :post, url: retweet_tweet_path(tweet) do |f| %>
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
