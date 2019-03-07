@@ -1,0 +1,11 @@
+<div class="col-md-12 d-flex">
+  <div class="card w-100 mb-4">
+    <div class="card-body">
+    <div class="card-title">Retweet With a Quote</div>
+        <div>retweeted by: <%= tweet.user.email %></div>
+            <div>body: <%= tweet.body %></div>
+          <%= render partial: 'tweets/tweet', locals: {tweet: tweet.tweet} %>
+    </div>
+      <%= render partial: 'tweet_footer', locals: {tweet: tweet} %>
+  </div>
+</div>  

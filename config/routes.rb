@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  
+  resources :tweets do
+    member do
+      post :retweet
+    end
+  end
   get 'pages/home'
 
   devise_scope :user do

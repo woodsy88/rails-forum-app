@@ -1,0 +1,11 @@
+<div class="col-md-12 d-flex">
+  <div class="card w-100 mb-4">
+    <div class="card-body">
+                posted by: <%= tweet.user.email %>
+                <%= tweet.user_id %>
+                <%= tweet.body %>
+                <%= tweet.tweet_id %>
+    </div>
+      <%= render partial: 'tweet_footer', locals: {tweet: tweet} %>
+  </div>
+</div>  

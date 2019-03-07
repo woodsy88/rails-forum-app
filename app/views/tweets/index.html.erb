@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tweets</h1>
+    <% @tweets.each do |tweet| %>
+      <%= render partial: "tweets/#{tweet.tweet_type}", locals: {tweet: tweet} %>
+    <% end %>
+
+<%= link_to 'New Tweet', new_tweet_path, class: "btn btn-primary"%>
