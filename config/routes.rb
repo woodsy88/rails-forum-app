@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :saved_messages
+
   resources :tweets do
     member do
       post :retweet

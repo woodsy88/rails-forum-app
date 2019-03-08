@@ -1,7 +1,10 @@
-<%= form_for [@forum_thread, @forum_post] do |f| %>
+<%= form_for [@forum_thread, @forum_post], html: {data: {behavior: "has-saved-messages"}} do |f| %>
   <div class="form-group">
-    <%= f.text_area :body, placeholder: "Add a new post", rows: 5, class: "form-control" %>
+    <%= f.text_area :body, placeholder: "enter text", rows: 5, class: "form-control", data: {behavior: "comment-body"} %>
   </div>
+
+  <%= link_to 'Add a saved message', new_saved_message_path %>
+  <%= select_tag  "saved messages", options_for_select(SavedMessage.all.map{ |savedmessage| [savedmessage.title, savedmessage.id, data: {body: savedmessage.body}]}), prompt: "Select a saved message", data: {behavior: "saved-message-select"} %>
 
   <div class="form-group">
     <%= f.submit class: "btn btn-primary" %>
